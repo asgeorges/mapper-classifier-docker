@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Alex Georges "ageorges@ucsd.com"
 
@@ -8,8 +8,6 @@ RUN apt-get update -y && \
 COPY ./requirements.txt /requirements.txt
 
 WORKDIR /
-
-RUN pip install --upgrade pip
 
 RUN pip3 install -r requirements.txt
 
